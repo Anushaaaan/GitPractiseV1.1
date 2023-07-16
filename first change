@@ -1,0 +1,55 @@
+public class print2darrayinsprial {
+    public static void main(String[] args) {
+        int arr[][] = {{1, 2, 3, 4}, {11, 12, 13, 14}, {10, 20, 30, 40}, {120, 90, 110, 80}};
+        spiral(arr);
+
+    }
+
+    public static void spiral(int[][] arr) {
+        int minr = 0;
+        int maxr = arr.length - 1;
+        int minc = 0;
+        int maxc = arr[0].length - 1;
+        int total = arr.length * arr[0].length;
+        int count = 0;
+        while (count < total) {
+            for (int i = minc; i < maxc; i++) {
+                System.out.print(arr[minr][i] + " ");
+            }
+            minr++;
+            for (int i = minr; i <= maxr; i++) {
+                System.out.print(arr[i][maxc] + " ");
+            }
+            maxc--;
+            for (int i = maxc; i >= minc; i--) {
+                System.out.print(arr[maxr][i] + " ");
+            }
+            maxr--;
+            for (int i = maxr; i >= minr; i--) {
+                System.out.print(arr[minc][i]);
+            }
+            minc++;
+        }
+    }
+}
+/*
+
+public static void print ( int [][]arr) {
+		int minr= 0;
+		int maxr= arr.length -1 ;
+		int minc = 0;
+		int maxc = arr[0].length;
+		for (int i = minc ; i<= maxc ; i++) {
+			System.out.println(arr[minr][i]+ " ");
+		}
+		minr++;
+		for( int i = minr;i<= maxr; i++) {
+			System.out.println(arr[i][maxc]+" ");
+		}
+		maxc--;
+		for( int i = maxc; i>= minc;i--) {
+			System.out.println(arr[maxc][i]+" ");
+		}
+		maxr--;
+	}
+ */
