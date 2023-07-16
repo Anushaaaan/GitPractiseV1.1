@@ -16,7 +16,16 @@ class _HomescreenState extends State<Homescreen> {
       ),
       body: Column(
         children: [
-          
+          const Text('This is the homescreen'),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Homescreen()),
+              );
+            },
+            child: const Text('Go to homescreen'),
+          ),
         ],
       )
 
