@@ -14,12 +14,12 @@ class _HomescreenState extends State<Homescreen> {
       appBar: AppBar(
         title: const Text('Homescreen'),
       ),
-      body: const Center(
-        child: Text(
-          'This is the homescreen',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+      body: Column(
+        children: [
+          
+        ],
+      )
+
     );
   }
 }
